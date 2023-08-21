@@ -1,0 +1,504 @@
+body{
+    background-image: radial-gradient(circle at center, hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
+   color: white;
+}
+
+.container{
+    width: ;
+}
+
+header{
+    border: 3px solid  hsl(217, 16%, 45%);
+    margin: .8rem;
+    padding: .5rem;
+   
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px;
+    align-items: center;
+}
+
+header .computer{
+    display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+header .computer p{
+    margin: .2rem 0;
+}
+.score-overall{
+    display: flex;
+}
+header .c-score{
+    background-color: white;
+    color: black;
+    height:60px;
+  padding: .3rem 1.3rem;
+  border-radius: 10px;
+  margin-right: .8rem;
+  text-align: center;
+}
+
+header .u-score{
+    background-color: white;
+    color: black;
+    height:60px;
+  padding: .3rem 1.3rem;
+  border-radius: 10px;
+  margin-right: .8rem;
+}
+
+header .c-score p, h3{
+    margin: 0;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+
+header .u-score p, h3{
+    margin: 0;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+header .u-score h3{
+    font-size: 37px;
+}
+header .c-score h3{
+    font-size: 37px;
+}
+
+.user{
+    width: 50%;
+
+    margin:4rem auto;
+    position: relative;
+
+}
+
+.u-rock{
+    position: absolute;
+    left: 50%;
+    margin-top: 1rem;
+    transform: translate(-50%);
+    border: 10px solid hsl(349, 70%, 56%);
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.u-scissors{
+    border: 10px solid hsl(40, 84%, 53%);
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 20px;
+    align-items: center;
+}
+.u-paper{
+    border: 10px solid   hsl(230, 89%, 65%);
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+ position: relative;
+ right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper{
+    display: flex;
+    justify-content: space-between;
+
+}
+.a{
+    position: absolute;
+    font-size: 20px;
+   width: 150px;
+}
+
+.rules{
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    border: 3px solid ;
+    padding:.5rem 1rem;
+    border-radius: 5px;
+transition: all .3s;
+}
+.rules:hover{
+    background-color: white;
+    color: black;
+}
+
+.rules-tab{
+position: absolute;
+top: 50%;
+display: none;
+z-index: 1;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.678);
+    
+
+}
+
+.attribution{
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    left: 40px;
+}
+
+.alrt{
+    width: 80%;
+    background-color:  hsl(217, 16%, 45%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    transition: all .2s;
+    border-radius: 10px;
+}
+.alrt.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.alrt .board{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
+.show{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.r{
+    border: 10px solid hsl(40, 84%, 53%);
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 20px;
+    align-items: center;
+}
+
+.s{
+    border: 10px solid   hsl(230, 89%, 65%);
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+ position: relative;
+ right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p{
+    border: 10px solid   hsl(230, 89%, 65%);
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+ position: relative;
+ left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.r{
+ 
+    border: 10px solid hsl(349, 70%, 56%);
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    left: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s{
+    border: 10px solid hsl(40, 84%, 53%);
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 20px;
+    align-items: center;
+
+}
+
+.set{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.set button{
+    margin: 2rem ;
+    padding: 1rem 4rem;
+    border: none;
+    background-color: hsl(230, 89%, 65%); 
+    color: white;
+    border-radius: 7px;
+    transition: all .5s;
+}
+
+.set button:hover{
+    background-color: white;
+    color:hsl(230, 89%, 65%); ;
+}
+
+.set .contain{
+    display: flex;
+    margin: 1rem ;
+    align-items: center;
+}
+
+.set .contain i:hover{
+    background-color: white;
+    color:hsl(230, 89%, 65%); 
+}
+.set .contain i{
+    width: 50px;
+    display: flex;
+    transition: all .5s;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    height: 50px;
+    background:hsl(230, 89%, 65%); ;
+}
+.set .limit{
+    font-size: 40px;
+}
+.set .contain i:first-child{
+    margin-right: 3rem;
+}
+.set .contain i:last-child{
+    margin-left: 3rem;
+}
+.set-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+.cp{
+    border: 10px solid   hsl(230, 89%, 65%);
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+ position: relative;
+ right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cr{
+ 
+    transform: translate(-50%);
+    border: 10px solid hsl(349, 70%, 56%);
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    right: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cs{
+    border: 10px solid hsl(40, 84%, 53%);
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 20px;
+    align-items: center;
+
+}
+
+
+
+.cont{
+    margin: 1rem;
+    padding: .8rem 2rem;
+    border-radius: 6px;
+    border: none;
+}
+
+
+.winner{
+    width: 80%;
+    background-color:  hsl(217, 16%, 45%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all .2s;
+    border-radius: 10px;
+}
+
+.btns{
+    display: flex;
+    width: 90%;
+
+}
+
+.winner.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.winner .w{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
+
+.winner button{
+   
+        margin: 2rem 1rem;
+        padding: 1.5rem 0;
+        width:100%;
+        border: none;
+        background-color: black; 
+        color: white;
+        border-radius: 7px;
+        transition: all .5s;
+
+}
+
+.winner button:hover{
+    background-color: white;
+    color:hsl(230, 89%, 65%); ;
+}
+
+
+@media screen and (min-width:500px) {
+    header{
+        border: 3px solid  hsl(217, 16%, 45%);
+        margin: .8rem;
+        padding: .5rem;
+       
+        display: flex;
+        justify-content: space-between;
+        border-radius: 6px;
+        margin: auto;
+        align-items: center;
+        width: 70%;
+    }
+
+    .user{
+        width: 30%;
+    
+        margin:4rem auto;
+        position: relative;
+    
+    }
+    .alrt{
+        width: 50%;
+        background-color:  hsl(217, 16%, 45%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        transition: all .2s;
+        border-radius: 10px;
+    }
+    .winner{
+        width: 50%;
+        background-color:  hsl(217, 16%, 45%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 1rem 0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        transition: all .2s;
+        border-radius: 10px;
+    }
+    
+}
